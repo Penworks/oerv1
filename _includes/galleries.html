@@ -1,0 +1,19 @@
+<!-- gallery html from https://dmnfarrell.github.io/software/jekyll-galleries 
+this code is now hacked, inspired by Jimmy Xiao at https://jimmyxiao.me/guides/technical/2019/07/28/folder-based-jekyll-lightgallery. You can see I adpated his liquid code to fit with my url and folder include structure. DMFarrell liquid DOES NOT WORK. I am stll using his styling  -->
+<div id="image-gallery"> 
+    {% for file in site.static_files %}
+    {% if file.path contains include.folder and file.path contains site.imagesurl %}
+   <div class="box">
+    <a href="{{site.baseurl}}{{ site.imagesurl }}{{ include.folder }}/{{ file.name }}" title="{{ file.name }}"><img src="{{site.baseurl}}{{ site.thumbsurl }}{{ include.folder }}/{{ file.name }}" alt="{{ file.name }}" class="img-gallery" /> </a>
+    </div> 
+
+
+    {% endif %} 
+    {% endfor %}
+</div> 
+
+<script>
+    $('#{{include.folder}}').lightGallery({
+    site.thumbsurl:true
+});
+</script>
