@@ -9,14 +9,15 @@
 # in the templates via {{ site.myvariable }}.
 # errors for build trying to trace
 
-title: "Smart Learning : Activities & Ideas"
+title: "Penworks OER"
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This site is an archive of work containing the technical, design and content used to build smart 
-  learning journeys with augmented reality, maps and communications. 
-  It formed the technical aspects of a PhD in smart learning, 2016-2021.
-tagline: On location and learning
-baseurl: "/smartlearning" # the subpath of your site, e.g. /blog
+  Penworks OER Educational materials from Dr Pen, 
+  created for tertiarty level education, 
+  from year 0 foundation through to Level 7 and some 
+  Level 8 seminar presentations. 
+tagline: Open learning and teaching
+baseurl: "/oerv1" # the subpath of your site, e.g. /blog
 url: "https://penworks.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 #add exlcusion of ugly category segments in url structure. this is from he categories plugin recommendation
@@ -26,6 +27,8 @@ github_username:  penworks
 
 # Build settings
 remote_theme: pages-themes/tactile
+#remote_theme: minima
+#remote_theme: jekyll/minima
 #
 plugins:
   - jekyll-feed
